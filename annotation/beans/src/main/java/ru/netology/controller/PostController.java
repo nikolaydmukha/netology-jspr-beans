@@ -2,6 +2,7 @@ package ru.netology.controller;
 
 import com.google.gson.Gson;
 import org.springframework.stereotype.Controller;
+import ru.netology.exception.NotFoundException;
 import ru.netology.model.Post;
 import ru.netology.service.PostService;
 
@@ -25,8 +26,16 @@ public class PostController {
     response.getWriter().print(gson.toJson(data));
   }
 
-  public void getById(long id, HttpServletResponse response) {
+  public void getById(long id, HttpServletResponse response) throws IOException {
     // TODO: deserialize request & serialize response
+    final var gson = new Gson();
+    try {
+      Post postById = service.getById(id);
+      response.getWriter().print(gson.toJson(postById));
+
+    } catch (NotFoundException ex) {
+      response.getWriter().print("No post found with id = " + id);
+    }
   }
 
   public void save(Reader body, HttpServletResponse response) throws IOException {
@@ -37,7 +46,9 @@ public class PostController {
     response.getWriter().print(gson.toJson(data));
   }
 
-  public void removeById(long id, HttpServletResponse response) {
+  public void removeById(long id, HttpServletResponse response) throws IOException {
     // TODO: deserialize request & serialize response
+    service.removeById(id);
+    response.getWriter().print("Success delete post with id = " + id);
   }
 }

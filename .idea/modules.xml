@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/annotation/beans/annotation.iml" filepath="$PROJECT_DIR$/annotation/beans/annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/xml/beans/beans.iml" filepath="$PROJECT_DIR$/xml/beans/beans.iml" />
       <module fileurl="file://$PROJECT_DIR$/java1/beans/beans (1).iml" filepath="$PROJECT_DIR$/java1/beans/beans (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/java2/beans/beans (2).iml" filepath="$PROJECT_DIR$/java2/beans/beans (2).iml" />
-      <module fileurl="file://$PROJECT_DIR$/annotation/beans/beans (3).iml" filepath="$PROJECT_DIR$/annotation/beans/beans (3).iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/netology-jspr-di.iml" filepath="$PROJECT_DIR$/.idea/netology-jspr-di.iml" />
     </modules>
   </component>
