@@ -1,0 +1,5 @@
+# Project exclude paths
+/annotation/beans/target/
+/java1/beans/target/
+/java2/beans/target/
+/xml/beans/target/
